@@ -6,16 +6,16 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import site.sixteen.sell.SellApplicationTests;
 import site.sixteen.sell.entity.ProductCategory;
-import site.sixteen.sell.service.impl.ProductCategoryServiceImpl;
+import site.sixteen.sell.service.impl.CategoryServiceImpl;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
-public class ProductCategoryServiceTest extends SellApplicationTests {
+public class CategoryServiceTest extends SellApplicationTests {
 
     @Autowired
-    private ProductCategoryServiceImpl productCategoryService;
+    private CategoryServiceImpl productCategoryService;
 
     @Test
     public void saveOrUpdate() {

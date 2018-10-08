@@ -14,17 +14,18 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Slf4j
-public class ProductInfoServiceTest extends SellApplicationTests {
+public class ProductServiceTest extends SellApplicationTests {
 
     @Autowired
-    ProductInfoService productInfoService;
+    ProductService productInfoService;
 
     @Test
     public void saveOrUpdate() {
         ProductInfo productInfo = null;
-//        productInfo = new ProductInfo("100001","七界异神", BigDecimal.valueOf(29.99), 100, "讲述一个幼年父母被同门陷害致死的男孩，被收养后一步一步从小角色复仇到走向仙界的故事。", "https://sixteen.site/qijieyishen.jpg", ProductStatusEnum.UP.getCode(), 2);
-//        productInfo = new ProductInfo("100002","斗破苍穹", BigDecimal.valueOf(39.99), 600, "萧炎的故事", "https://sixteen.site/doupochangqiong.jpg", ProductStatusEnum.UP.getCode(), 2);
+        productInfo = new ProductInfo("100001", "七界异神", BigDecimal.valueOf(29.99), 100, "讲述一个幼年父母被同门陷害致死的男孩，被收养后一步一步从小角色复仇到走向仙界的故事。", "https://sixteen.site/qijieyishen.jpg", ProductStatusEnum.UP.getCode(), 2);
+        productInfo = new ProductInfo("100002", "斗破苍穹", BigDecimal.valueOf(39.99), 600, "萧炎的故事", "https://sixteen.site/doupochangqiong.jpg", ProductStatusEnum.UP.getCode(), 2);
         productInfo = new ProductInfo("100003", "武动乾坤", BigDecimal.valueOf(34.99), 300, "林动的故事", "https://sixteen.site/wudongqiankun.jpg", ProductStatusEnum.UP.getCode(), 2);
+        productInfo = new ProductInfo("100004", "魔道祖师", BigDecimal.valueOf(45.99), 50, "夷陵老祖魏无羡的故事", "https://sixteen.site/modaozushi.jpg", ProductStatusEnum.UP.getCode(), 3);
         ProductInfo result = productInfoService.saveOrUpdate(productInfo);
         log.debug("result is : {}", result);
         Assert.assertNotNull(result);

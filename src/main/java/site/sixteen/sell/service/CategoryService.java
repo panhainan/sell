@@ -5,14 +5,14 @@ import site.sixteen.sell.entity.ProductCategory;
 import java.util.List;
 
 /**
- * ProductCategoryService
+ * CategoryService
  *
  * @author panhainan@yeah.net(@link https://sixteen.site)
  * @version 1.0
  * @use 商品类目表业务逻辑接口
  * @date 2018/9/6
  */
-public interface ProductCategoryService {
+public interface CategoryService {
 
     /**
      * 保存或者更新商品类目信息

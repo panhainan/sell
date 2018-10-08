@@ -2,19 +2,20 @@ package site.sixteen.sell.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import site.sixteen.sell.dto.CartDTO;
 import site.sixteen.sell.entity.ProductInfo;
 
 import java.util.List;
 
 /**
- * ProductInfoService
+ * ProductService
  *
  * @author panhainan@yeah.net(@link https://sixteen.site)
  * @version 1.0
  * @use 商品业务逻辑层接口
  * @date 2018/9/6
  */
-public interface ProductInfoService {
+public interface ProductService {
 
     /**
      * 保存或者更新商品信息
@@ -48,6 +49,18 @@ public interface ProductInfoService {
      */
     Page<ProductInfo> listAllBy(Pageable pageable);
 
-    //TODO 加减库存
+    /**
+     * 加库存
+     *
+     * @param cartDTOList 购物车list
+     */
+    void increaseStock(List<CartDTO> cartDTOList);
+
+    /**
+     * 减库存
+     *
+     * @param cartDTOList 购物车list
+     */
+    void decreaseStock(List<CartDTO> cartDTOList);
 
 }

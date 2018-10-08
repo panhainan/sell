@@ -1,6 +1,7 @@
 package site.sixteen.sell.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import site.sixteen.sell.entity.ProductInfo;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  * @use 商品数据访问层接口
  * @date 2018/9/6
  */
+@Repository
 public interface ProductInfoRepository extends JpaRepository<ProductInfo, String> {
 
     /**

@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import site.sixteen.sell.dao.ProductCategoryRepository;
 import site.sixteen.sell.entity.ProductCategory;
-import site.sixteen.sell.service.ProductCategoryService;
+import site.sixteen.sell.service.CategoryService;
 
 import java.util.List;
 
 /**
- * ProductCategoryServiceImpl
+ * CategoryServiceImpl
  *
  * @author panhainan@yeah.net(@link https://sixteen.site)
  * @version 1.0
@@ -17,7 +17,7 @@ import java.util.List;
  * @date 2018/9/6
  */
 @Service("productCategoryService")
-public class ProductCategoryServiceImpl implements ProductCategoryService {
+public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
